@@ -1,0 +1,28 @@
+/// Linear search. 
+
+#include <iostream>
+using namespace std;
+
+int main()
+    {
+        int i,a[]={7,5,4,90,78,11,23,45};
+        int j=0,it;
+        cin>>it;
+        for(i=0; i<8;i++)
+        {
+            if(it==a[i])
+            {
+                j++;
+                break;
+            }
+        }
+        if(j==0)
+        {
+            cout<<"Data is not found.";
+        }
+        else
+        {
+            cout<<"Data is found.";
+        }
+        return 0;
+    }
