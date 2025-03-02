@@ -3,30 +3,30 @@
 using namespace std;
 int main()
 {
-    int i,a[]={2,3,4,5,6,7,8,9};
+    int i,s,e,m, d[]={3,4,5,6,7,8,9};
     cin>>i;
-    int b=0;
-    int e=7;
-    int m;
-    while(b<=e && a[m]!=i)
+    s=0;
+    e=6;
+    m=(s+e)/2;
+    while(s<=e && i!=d[m])
     {
-        m=int(b+e)/2;
-        if(i<a[m])
+        if(i<d[m] && i!=d[m])
         {
             e=m-1;
         }
         else
         {
-            b=m+1;
+            s=m+1;
         }
+        m=(s+e)/2;
     }
-    if(i==a[m])
+    if(d[m]==i)
     {
-        cout<<"Date is found at mid";
+        cout<<"Data is found";
     }
     else
     {
-        cout<<"Data is not found at mid";
+        cout<<"Data is not found";
     }
     return 0;
 }
